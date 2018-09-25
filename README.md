@@ -1,7 +1,7 @@
 [//]: # "business-support-093-recolectapp"
 
 <p align="center">
-  <img src="assets/title_recolectapp.png">
+  <img src="assets/banner_fedesoft.png">
 </p>
 
 
@@ -14,8 +14,10 @@
 Propuesta,
 
 
+ <p align="center">
+  <img src="assets/title_recolectapp.png">
+ </p>
 
-# RECOLECTAPP
 
 RecolectApp es una aplicación móvil que busca revolucionar el proceso de reciclaje, facilitando la recolección de residuos desde los hogares, e integrando dentro de la comunidad a la población recicladora.
 
