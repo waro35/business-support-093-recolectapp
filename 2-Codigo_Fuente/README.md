@@ -6,7 +6,8 @@
 
 
 
-## Código Fuente [+](2-Código Fuente)
+## Código Fuente
+
 
 Contiene el código fuente del backend y el frontend de la aplicación.
 

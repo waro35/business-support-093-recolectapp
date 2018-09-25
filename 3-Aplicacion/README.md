@@ -7,7 +7,8 @@
 
 
 
-## Aplicación [+](3-Aplicación)
+## Aplicación
+
 
 Detalle del apk y link de descarga de la aplicación móvil.
 

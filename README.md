@@ -1,4 +1,4 @@
-# business-support-093-recolectapp
+[//]: # "business-support-093-recolectapp"
 
 <p align="center">
   <img src="assets/title_recolectapp.png">
@@ -21,7 +21,7 @@ RecolectApp es una aplicación móvil que busca revolucionar el proceso de recic
 
 
 
-## Documentación [+](1-Documentación)
+## Documentación [+](1-Documentacion)
 
 Acá encontrará toda la documentación del proyecto, relacionada con las siguientes temáticas:
 
@@ -33,13 +33,13 @@ Acá encontrará toda la documentación del proyecto, relacionada con las siguie
 
 
 
-## Código Fuente [+](2-Código Fuente)
+## Código Fuente [+](2-Codigo_Fuente)
 
 Contiene el código fuente del backend y el frontend de la aplicación.
 
 
 
-## Aplicación [+](3-Aplicación)
+## Aplicación [+](3-Aplicacion)
 
 Detalle del apk y link de descarga de la aplicación móvil.
 
