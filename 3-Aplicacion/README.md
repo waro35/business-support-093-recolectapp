@@ -1,7 +1,7 @@
 # business-support-093-recolectapp
 
 <p align="center">
-  <img src="assets/title_recolectapp.png">
+  <img src="../assets/title_recolectapp.png">
 </p>
 
 
