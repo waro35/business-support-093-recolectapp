@@ -22,7 +22,7 @@ Propuesta,
 RecolectApp es una aplicación móvil que busca revolucionar el proceso de reciclaje, facilitando la recolección de residuos desde los hogares, e integrando dentro de la comunidad a la población recicladora.
 
 
-![img](assets/documento.png)
+![img](assets/documento.png){: width=20px}
 
 ## Documentación [+](1-Documentacion)
 
