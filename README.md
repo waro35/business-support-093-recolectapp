@@ -22,7 +22,7 @@ Propuesta,
 RecolectApp es una aplicación móvil que busca revolucionar el proceso de reciclaje, facilitando la recolección de residuos desde los hogares, e integrando dentro de la comunidad a la población recicladora.
 
 
-## <img src="assets/documento.png" width"20px"> Documentación [+](1-Documentacion)
+## <img src="assets/documento.png" width="18px"> Documentación [+](1-Documentacion)
 
 Acá encontrará toda la documentación del proyecto, relacionada con las siguientes temáticas:
 
@@ -34,17 +34,17 @@ Acá encontrará toda la documentación del proyecto, relacionada con las siguie
 
 
 
-## Código Fuente [+](2-Codigo_Fuente)
+## <img src="assets/codigo.png" width="18px"> Código Fuente [+](2-Codigo_Fuente)
 
 Contiene el código fuente del backend y el frontend de la aplicación.
 
 
 
-## Aplicación [+](3-Aplicacion)
+## <img src="assets/android.png" width="18px"> Aplicación [+](3-Aplicacion)
 
 Detalle del apk y link de descarga de la aplicación móvil.
 
-## Página Web [+](4-Landing_Page)
+## <img src="assets/web.png" width="18px"> Página Web [+](4-Landing_Page)
 
 Contiene el HTML y CSS de la landing page.
 
