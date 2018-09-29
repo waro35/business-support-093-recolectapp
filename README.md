@@ -23,7 +23,7 @@ RecolectApp es una aplicación móvil que busca revolucionar el proceso de recic
 
 
 
-## Documentación [+](1-Documentacion)
+<h2><img src="assets/documento.png">&nbsp;Documentación</h2> [+](1-Documentacion)
 
 Acá encontrará toda la documentación del proyecto, relacionada con las siguientes temáticas:
 
