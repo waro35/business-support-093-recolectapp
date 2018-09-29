@@ -45,3 +45,7 @@ Contiene el código fuente del backend y el frontend de la aplicación.
 
 Detalle del apk y link de descarga de la aplicación móvil.
 
+## Página Web [+](4-Landing_Page)
+
+Contiene el HTML y CSS de la landing page.
+
