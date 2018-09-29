@@ -1,7 +1,7 @@
 [//]: # "business-support-093-recolectapp"
 
 <p align="center">
-  <img src="assets/banner_fedesoft.png">
+  <img src="assets/banner-colaboradores.png">
 </p>
 
 
@@ -15,7 +15,7 @@ Propuesta,
 
 
  <p align="center">
-  <img src="assets/title_recolectapp.png">
+  <img src="assets/logo-recolectapp.png">
  </p>
 
 
