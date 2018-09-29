@@ -15,7 +15,7 @@ Propuesta,
 
 
  <p align="center">
-  <img src="assets/logo-recolectapp.png">
+  <img src="assets/logo-recolectapp.png" width="250px">
  </p>
 
 
