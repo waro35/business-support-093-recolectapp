@@ -1,0 +1,309 @@
+/* --- Contenido
+
+01. GENERAL LAYOUT
+02. MENU - NAV
+03. HOME
+04. ABOUT
+05. SERVICES/FEATURES
+06. TEAM
+07. PRICING
+08. CONTACT
+09. FOOTER
+10. OTHER ELEMENTS
+		1. NEWSLETTER
+		2. TESTIMONIALS
+		3. PARTNERS
+		4. DOWNLOAD BUTTONS
+		5. GALLERY
+		6. ICON EFFECTS
+		7. ACCORDION
+		8. SPONSORS
+		9. VIDEO
+		10. MEDIA QUERIES
+
+--- */
+
+/* ========================================================== */
+/* 			               01. GENERAL LAYOUT                 */
+/* ========================================================== */
+
+p {
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	line-height: 24px;
+	font-weight: 400;
+	color: #7c8595;
+	margin-bottom:15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Kanit', sans-serif;
+  line-height: 1.2;
+  margin-bottom:20px;
+  color: #2F362F;
+}
+
+h1 {
+	font-size: 42px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 18px;
+}
+
+.section-white {
+	background: #fff;
+	padding: 20px 0;
+}
+
+.section-grey{
+	background: #f2f7f8;
+	padding: 70px 0;
+}
+
+.section-white.no-padding, .section-grey.no-padding {
+	padding:0;
+}
+
+.width-100{
+	width: 80%;
+}
+.width-200{
+	width: 90%;
+	padding-left: 45px;
+}
+
+/* ========================================================== */
+/* 			               02. MENU-NAV                       */
+/* ========================================================== */
+
+#logo{
+height: 100px;
+}
+.logo-header {
+	position: absolute;
+	left: -20px;
+	right: 0;
+	top:0;
+	padding-top: 50px;
+	z-index: 999;
+	float: left;
+}
+/* ========================================================== */
+/* 			               03. HOME                           */
+/* ========================================================== */
+
+.home-section {
+background: url(../images/bogota-noche-3.jpg) top center no-repeat;
+background-size: cover;
+width: 100%;
+position: relative;
+padding-top: 80px;
+padding-bottom: 20px;
+	  
+}
+.home-section-overlay {
+	background: #008d36; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top,#008d36, #95c11f);  /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #008d36, #95c11f); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #008d36, #95c11f); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(bottom right, #008d36, #95c11f); /* Standard syntax */
+	position: absolute;
+	opacity: 0.9;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.hero-description{
+	position:relative;
+	z-index:200;
+	padding-top: 120px;
+	padding-bottom: 40px;
+}
+
+.hero-picture{
+	margin-bottom:-100px;
+}
+.img-dispositivo{
+	margin-bottom: -100px;	
+}
+
+.hero-description h1{
+	font-size: 36px;
+	line-height: 44px;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 1px;
+	display: inline-block;
+}
+
+.hero-description p{
+	font-size: 19px;
+	line-height: 28px;
+	font-weight: 400;
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.btn-white {
+	color: #fff;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	border: 2px solid #fff;
+	border-radius: 5px 5px;
+	padding: 15px 30px;
+	display: inline-block;
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+}
+
+.btn-white:hover{
+	color: #008d36;
+	background: #fff;
+	border: 2px solid #fff;
+}
+
+.btn-white i {
+	font-size: 22px;
+	line-height: 22px;
+	margin-right: 10px;
+	vertical-align: text-top;
+}
+
+/* ========================================================== */
+/* 			               04. ABOUT                          */
+/* ========================================================== */
+
+.about-box {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.about-box i{
+	font-size: 58px;
+	margin-bottom: 0;
+	display: inline-block;
+	line-height: 90px;
+	width: 90px;
+	height: 90px;
+}
+
+.about-box h3{
+	font-size: 20px;
+	color: #292929;
+	margin-bottom: 15px;
+}
+
+.about-box p{
+	padding: 0 10px;
+}
+
+/* ========================================================== */
+/* 			                09. FOOTER                        */
+/* ========================================================== */
+
+.footer {
+	z-index:900;
+	background-color: #2f3539;
+	padding: 15px 0 10px 0;
+    justify-content: center; 
+    align-items: center;
+}
+
+.footer p {
+	font-size: 14px;
+	color: #cecece;
+}
+
+.footer p a {
+	font-size: 16px;
+	color: #4285f4;
+	text-decoration:underline;
+}
+
+/* ========================================================== */
+/* 			               10. OTHER ELEMENTS                 */
+/* ========================================================== */
+
+/* SPONSORS */
+
+.section-grey.sponsors-padding {
+    padding: 25px 0 20px 0;
+}
+
+.sponsors img.sponsor {
+    opacity: 0.4;
+    margin: 10px 25px 10px 0;
+    max-height: 25px;
+    transition: .2s ease;
+}
+.sponsors img.sponsor:hover {
+    opacity: 0.8;
+}
+
+.partners-title{
+	font-size: 18px;
+	line-height: 26px;
+	float: left;
+	margin-right: 30px;
+	color: #7c8595;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+
+	.hero-picture{
+		margin-bottom:0;
+	}
+	.img-dispositivo{
+		margin-bottom:0;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.home-section {
+		padding-top: 150px;
+	  	padding-bottom: 50px;
+	}
+    
+    .home-title h1{	
+		font-size: 40px;
+		line-height: 50px;
+		padding: 30px 35px;
+	}
+
+	.home-title span{
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.home-title p{
+		margin-bottom:30px!important;
+	}
+}
