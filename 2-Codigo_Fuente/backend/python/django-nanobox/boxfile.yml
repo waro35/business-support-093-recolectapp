@@ -25,10 +25,16 @@ data.mysql:
     ft_query_expansion_limit: 20
     ft_stopword_file: ' '
     users:
-      - username: root
+      - username: recolectapp
         meta:
           privileges:
             - privilege: ALL PRIVILEGES
-              'on': "*.*"
+              'on': gonano.*
               with_grant: true
+            - privilege: ALL PRIVILEGES
+              'on': recolectapp.*
+              with_grant: true
+          databases:
+            - gonano
+            - recolectapp
 

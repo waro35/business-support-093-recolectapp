@@ -81,9 +81,9 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'gonano',
-        'USER': 'root',
-        'PASSWORD': os.environ.get('DATA_MYSQL_ROOT_PASS'),
+        'NAME': 'recolectapp',
+        'USER': 'recolectapp',
+        'PASSWORD': os.environ.get('DATA_MYSQL_RECOLECTAPP_PASS'),
         'HOST': os.environ.get('DATA_MYSQL_HOST'), 
         'PORT': '3306',
     }
