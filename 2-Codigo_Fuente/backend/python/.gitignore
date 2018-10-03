@@ -88,3 +88,14 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#incluir solo el proyecto de la carpeta del ambiente virtual
+!env/
+env/bin/*
+env/include/*
+env/lib/*
+env/pip-selfcheck.json
+env/proyecto_fedesoft/proyecto_fedesoft/__pycache__/*
+env/proyecto_fedesoft/recolectapp/__pycache__/*
+env/proyecto_fedesoft/recolectapp/migrations/*
+
