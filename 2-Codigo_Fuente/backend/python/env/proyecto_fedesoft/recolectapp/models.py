@@ -7,6 +7,16 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+class Ubicacion(models.Model):
+    latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
+    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
+  
+    # def __str__(self): 
+    #     return self.latitud
+    class Meta:
+       managed = True
+       db_table = 'recolectapp_ubicacion'
+
 
 class Localidad(models.Model):
     nombre = models.CharField(max_length=100, blank=True, null=True)
@@ -14,8 +24,8 @@ class Localidad(models.Model):
     estado = models.CharField(max_length=8, blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'localidad'
+        managed = True
+        db_table = 'recolectapp_localidad'
 
 
 class Operacion(models.Model):
@@ -25,54 +35,8 @@ class Operacion(models.Model):
     estado = models.CharField(max_length=8, blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'operacion'
-
-
-class OperacionRol(models.Model):
-    id_operacion = models.ForeignKey(Operacion, models.DO_NOTHING, db_column='id_operacion', primary_key=True)
-    id_rol = models.ForeignKey('Rol', models.DO_NOTHING, db_column='id_rol')
-
-    class Meta:
-        managed = False
-        db_table = 'operacion_rol'
-
-
-class OrdenServicio(models.Model):
-    numero_orden = models.CharField(max_length=50, blank=True, null=True)
-    fecha_creacion = models.DateField(blank=True, null=True)
-    fecha_ejecucion = models.DateField(blank=True, null=True)
-    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
-    id_solicitud = models.ForeignKey('SolicitudServicio', models.DO_NOTHING, db_column='id_solicitud')
-
-    class Meta:
-        managed = False
-        db_table = 'orden_servicio'
-
-
-class OrdenServicioHistorico(models.Model):
-    id_orden = models.ForeignKey(OrdenServicio, models.DO_NOTHING, db_column='id_orden')
-    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
-    fecha_registro = models.DateField(blank=True, null=True)
-    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='id_usuario')
-
-    class Meta:
-        managed = False
-        db_table = 'orden_servicio_historico'
-
-
-class Parametro(models.Model):
-    dominio = models.CharField(max_length=100, blank=True, null=True)
-    dominio_padre = models.CharField(max_length=100, blank=True, null=True)
-    codigo = models.CharField(max_length=20, blank=True, null=True)
-    codigo_padre = models.CharField(max_length=20, blank=True, null=True)
-    valor = models.CharField(max_length=255, blank=True, null=True)
-    descripcion = models.CharField(max_length=255, blank=True, null=True)
-    estado = models.CharField(max_length=8, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'parametro'
+        managed = True
+        db_table = 'recolectapp_operacion'
 
 
 class Rol(models.Model):
@@ -80,43 +44,17 @@ class Rol(models.Model):
     estado = models.CharField(max_length=8, blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'rol'
+        managed = True
+        db_table = 'recolectapp_rol'
 
 
-class SolicitudServicio(models.Model):
-    numero_solicitud = models.CharField(max_length=50, blank=True, null=True)
-    fecha_solicitud = models.DateField(blank=True, null=True)
-    descripcion = models.CharField(max_length=255, blank=True, null=True)
-    ubicacion = models.CharField(max_length=255, blank=True, null=True)
-    fecha_recogida = models.DateField(blank=True, null=True)
-    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='id_usuario')
-    id_ubicacion = models.ForeignKey('Ubicacion', models.DO_NOTHING, db_column='id_ubicacion')
-    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
+class OperacionRol(models.Model):
+    id_operacion = models.ForeignKey(Operacion, models.DO_NOTHING, db_column='id_operacion', primary_key=True)
+    id_rol = models.ForeignKey('Rol', models.DO_NOTHING, db_column='id_rol', null=True)
 
     class Meta:
-        managed = False
-        db_table = 'solicitud_servicio'
-
-
-class SolicitudServicioHistorico(models.Model):
-    id_solicitud = models.ForeignKey(SolicitudServicio, models.DO_NOTHING, db_column='id_solicitud')
-    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
-    fecha_registro = models.DateField(blank=True, null=True)
-    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='id_usuario')
-
-    class Meta:
-        managed = False
-        db_table = 'solicitud_servicio_historico'
-
-
-class Ubicacion(models.Model):
-    latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
-    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'ubicacion'
+        managed = True
+        db_table = 'recolectapp_operacion_rol'
 
 
 class Usuario(models.Model):
@@ -131,20 +69,83 @@ class Usuario(models.Model):
     tel_fijo = models.CharField(max_length=15, blank=True, null=True)
     tel_celular = models.CharField(max_length=15, blank=True, null=True)
     direccion = models.CharField(max_length=255, blank=True, null=True)
-    id_ubicacion = models.ForeignKey(Ubicacion, models.DO_NOTHING, db_column='id_ubicacion')
-    id_localidad = models.ForeignKey(Localidad, models.DO_NOTHING, db_column='id_localidad')
+    id_ubicacion = models.ForeignKey(Ubicacion, models.DO_NOTHING, db_column='id_ubicacion', null=True)
+    id_localidad = models.ForeignKey(Localidad, models.DO_NOTHING, db_column='id_localidad', null=True)
     estado = models.CharField(max_length=8, blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'usuario'
+        managed = True
+        db_table = 'recolectapp_usuario'
 
 
 class UsuarioRol(models.Model):
     id_rol = models.ForeignKey(Rol, models.DO_NOTHING, db_column='id_rol', primary_key=True)
-    id_usuario = models.ForeignKey(Usuario, models.DO_NOTHING, db_column='id_usuario')
+    id_usuario = models.ForeignKey(Usuario, models.DO_NOTHING, db_column='id_usuario', null=True)
 
     class Meta:
-        managed = False
-        db_table = 'usuario_rol'
+        managed = True
+        db_table = 'recolectapp_usuario_rol'
         unique_together = (('id_rol', 'id_usuario'),)
+
+
+class SolicitudServicio(models.Model):
+    numero_solicitud = models.CharField(max_length=50, blank=True, null=True)
+    fecha_solicitud = models.DateField(blank=True, null=True)
+    descripcion = models.CharField(max_length=255, blank=True, null=True)
+    ubicacion = models.CharField(max_length=255, blank=True, null=True)
+    fecha_recogida = models.DateField(blank=True, null=True)
+    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='id_usuario', null=True)
+    id_ubicacion = models.ForeignKey('Ubicacion', models.DO_NOTHING, db_column='id_ubicacion', null=True)
+    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'recolectapp_solicitud_servicio'        
+
+
+class SolicitudServicioHistorico(models.Model):
+    id_solicitud = models.ForeignKey(SolicitudServicio, models.DO_NOTHING, db_column='id_solicitud', null=True)
+    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
+    fecha_registro = models.DateField(blank=True, null=True)
+    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='id_usuario', null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'recolectapp_solicitud_servicio_historico'
+
+
+class OrdenServicio(models.Model):
+    numero_orden = models.CharField(max_length=50, blank=True, null=True)
+    fecha_creacion = models.DateField(blank=True, null=True)
+    fecha_ejecucion = models.DateField(blank=True, null=True)
+    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
+    id_solicitud = models.ForeignKey('SolicitudServicio', models.DO_NOTHING, db_column='id_solicitud', null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'recolectapp_orden_servicio'
+
+
+class OrdenServicioHistorico(models.Model):
+    id_orden = models.ForeignKey(OrdenServicio, models.DO_NOTHING, db_column='id_orden',null=True)
+    param_codigo_estado = models.CharField(max_length=20, blank=True, null=True)
+    fecha_registro = models.DateField(blank=True, null=True)
+    id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='id_usuario', null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'recolectapp_orden_servicio_historico'
+
+
+class Parametro(models.Model):
+    dominio = models.CharField(max_length=100, blank=True, null=True)
+    dominio_padre = models.CharField(max_length=100, blank=True, null=True)
+    codigo = models.CharField(max_length=20, blank=True, null=True)
+    codigo_padre = models.CharField(max_length=20, blank=True, null=True)
+    valor = models.CharField(max_length=255, blank=True, null=True)
+    descripcion = models.CharField(max_length=255, blank=True, null=True)
+    estado = models.CharField(max_length=8, blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'recolectapp_parametro'
